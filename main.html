@@ -11,7 +11,7 @@
     <div class="textoh1">
     <h1>História do ChatGPT</h1>
     </div>
-    <nav>
+    <nav class="link">
         <a href="#">Home</a>
         <a href="#">Tópicos</a>
         <a href="#">ajuda</a>
@@ -21,9 +21,14 @@
     <section id="introducao">
         <h2>Introdução</h2>
         <p>O ChatGPT é um sistema de inteligência artificial desenvolvido a partir de pesquisas avançadas em processamento de linguagem natural, tendo sua origem nos modelos de linguagem treinados para compreender e gerar texto de forma estatística e contextual. Ele foi criado pela OpenAI, um grupo de pesquisa fundado com o objetivo de investigar e desenvolver inteligências artificiais de maneira segura e responsável. Desde seu lançamento ao público, o ChatGPT rapidamente ganhou visibilidade, tanto por sua capacidade de manter diálogos coerentes quanto por simular respostas próximas à linguagem humana. A recepção inicial foi marcada por curiosidade e entusiasmo, especialmente entre estudantes, desenvolvedores e profissionais de diversas áreas. Ao mesmo tempo, surgiram questionamentos sobre seus limites, confiabilidade e impactos sociais. Esse contraste entre fascínio e cautela transformou o ChatGPT em um dos exemplos mais emblemáticos da atual relação entre seres humanos e sistemas de inteligência artificial.</p>
-        <div class="container-imagem">
-        <img src="imagens/ilgmyzin-agFmImWyPso-unsplash.jpg" alt="imagem do chatGPT" class="imagem1">
-        </div>
+        
+    <div>
+    <picture class="container-imagem">
+    <source media="(max-width: 600px)" srcset="imagens/saradasish-pradhan-WosAUEMnrWU-unsplash.jpg">
+    <img src="imagens/ilgmyzin-agFmImWyPso-unsplash.jpg" alt="imagem do chatGPT" class="imagem1">
+    </picture>
+    </div>
+        
     </section>
     <section id="evolucao">
         <h3>Evolução do ChatGPT e dos modelos GPT</h3>
@@ -55,6 +60,53 @@
         </tr>
     </table>
     </div>
+    <script>
+
+        var imagem1 = document.getElementsByClassName("imagem1")[0];
+        imagem1.addEventListener("mouseover", function() {
+            imagem1.style.transform = "scale(1.15)";
+            imagem1.style.transition = "0.5s ease";   // interações via JavaScript na primeira imagem, Linha (59-67)
+        })
+        imagem1.addEventListener("mouseout", function() {
+            imagem1.style.transform = "scale(1)";
+             imagem1.style.transition = "0.5s ease";
+        })
+
+        var imagem2 = window.document.getElementsByClassName("imagem2")[0];
+        imagem2.addEventListener("mouseover", function() {
+            imagem2.style.transform = "scale(1.15)";
+            imagem2.style.transition = "0.5s ease";   // interações via JavaScript na segunda imagem, Linha (69-77)
+        })
+        imagem2.addEventListener("mouseout", function() {
+            imagem2.style.transform = "scale(1)";
+            imagem2.style.transition = "0.5s ease";
+        })
+
+        var links = document.querySelectorAll('.menu nav a'); /* interações via JavaScript nos links do menu, Linha (79-101) usando querySelectorAll para selecionar todos os links dentro da navegação do menu e percorrendo utilizando forEach, uma espécie de loop.
+        */
+            links.forEach(function(link) {
+            link.addEventListener("mouseover", function() {
+                link.style.backgroundColor = "#20bfa6";
+                link.style.borderRadius = "2px";
+                link.style.fontSize = "20px";
+                link.style.transition = "0.5s ease";
+                link.style.color = "#2de1c2";
+                link.style.opacity = "0.95";
+            });
+        });
+
+        links.forEach(function(link) {
+            link.addEventListener("mouseout", function() {
+                link.style.backgroundColor = "transparent";
+                link.style.borderRadius = "0";
+                link.style.fontSize = "16px";
+                link.style.transition = "0.5s ease";
+                link.style.color = "#2de1c2";
+                link.style.opacity = "1";
+            })
+        })
+
+    </script>
     </main>
 </body>
 </html>
